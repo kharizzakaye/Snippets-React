@@ -1,0 +1,22 @@
+/** 
+  Challenge: User should be able to type in any characters on input and those character should show in the browser.
+  Challenge link: https://codepen.io/angelo_jin/pen/MWEQmqN
+**/
+
+
+function App() {
+  const [characters, setCharacters] = React.useState("");
+
+  return (
+    <>
+      <input 
+        type="text" 
+        placeholder="Enter Text" 
+        onChange={(event) => {setCharacters(event.target.value)}}
+       />
+      <p>{characters}</p>
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
