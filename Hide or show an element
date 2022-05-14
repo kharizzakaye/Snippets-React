@@ -1,0 +1,19 @@
+function App() {
+  const [toggle, setToggle] = React.useState(true);
+
+  const hideElement = () => {
+    setToggle(!toggle)
+  };
+  
+  return (
+    <>
+      <button onClick={hideElement}>Hide Element Below</button>
+
+      { toggle &&
+        <div>Toggle Challenge</div>
+      }
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
