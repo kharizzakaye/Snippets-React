@@ -1,0 +1,26 @@
+/**
+  Challenge: Pressing `Increment` button should increase the counter count by one. Pressing `Decrement` button should decrease the counter count by one.
+  Challenge Link: https://codepen.io/angelo_jin/pen/mdBxWwN
+**/
+
+const App = () => {
+  const [counter, setCounter] = React.useState(0);
+
+  const incrementCount = () => {
+    setCounter(counter + 1);
+  };
+  
+  const decrementCount = () => {
+    setCounter(counter - 1);
+  };
+  
+  return (
+    <div>
+      <h2>Counter: {counter}</h2>
+      <button onClick={(event) => {setCounter(incrementCount)}}>Increment</button>
+      <button onClick={(event) => {setCounter(decrementCount)}}>Decrement</button>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
